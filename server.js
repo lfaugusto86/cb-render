@@ -54,6 +54,7 @@ app.get('/', (_req, res) => res.json({ ok: true, service: 'cb-render', fonts: FO
 app.post('/render', async (req, res) => {
   try {
     const b = req.body || {};
+    if (b.marca && !b.variant) b.variant = b.marca; // el compositor elige frame por 'marca': cbdigital | cbventures
     if (!b.headline) return res.status(400).json({ error: 'headline requerido (sin titular no se genera)' });
     if (b.image && /^https?:\/\//.test(b.image)) b.imageHref = await toDataURI(b.image);
     const svg = buildSVG(b);
