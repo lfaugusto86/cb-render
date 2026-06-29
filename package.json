@@ -1,0 +1,17 @@
+{
+  "name": "cb-render",
+  "version": "1.0.0",
+  "description": "Microservicio HTML/SVG → PNG para la plantilla de marca de CB Ventures / CB Digital",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "express": "^4.19.2"
+  }
+}
