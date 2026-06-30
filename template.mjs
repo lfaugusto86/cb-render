@@ -102,7 +102,7 @@ export function buildSVG(o) {
   const subY = headY + (Math.max(HEAD.length, 1) - 1) * lh + 60;
   const barY = H - 150, rowY = H - 90;
   const headSVG = HEAD.map((ln, i) => `<text x="${pad}" y="${headY + i * lh}" font-family="Playfair Display" font-weight="800" font-size="60" letter-spacing="-1" fill="${ln.a ? ACCENT : '#F4F6FF'}">${esc(ln.t)}</text>`).join('');
-  const subSVG = SUB.map((t, i) => `<text x="${pad}" y="${subY + i * 40}" font-family="Outfit" font-weight="500" font-size="27" fill="#CDD3EE">${esc(t)}</text>`).join('');
+  const subSVG = SUB.map((t, i) => `<text x="${pad}" y="${subY + i * 40}" font-family="Outfit" font-weight="600" font-size="28" fill="#EDF0FC">${esc(t)}</text>`).join('');
   const ctaW = 52 + cta.length * 13.5;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <defs>
